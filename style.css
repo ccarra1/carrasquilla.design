@@ -55,10 +55,10 @@ table {
 /* ---------------------------------------- ROOT VARIABLES ---------------------------------------- */
 :root {
 	--forest: #012326;
-	--teal: #024059;
+	--avocado: #51594C;
 	--cream: #f2e1c2;
-	--gray: #aab5bf;
-	--butter: #f2da91;
+	--gray: #d9d9d9;
+	--olive: #858c74;
 	--white: #ffffff;
 }
 /* ---------------------------------------- GLOBAL STYLES ----------------------------------------*/
@@ -67,6 +67,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     position: relative;
+    font-family: dolly-new, sans-serif;
 }
 html, body {
     overflow-x: hidden;
@@ -112,17 +113,17 @@ main > section:nth-of-type(2) {
     padding-bottom: 2rem;
 }
 main > section:first-of-type section {
-    background-color: var(--teal);
+    background-color: var(--avocado);
     margin: 1rem 0;
-    border-radius: 1rem;
+    border-radius: .5rem;
     color: var(--white);
     padding: 1rem;
 }
-.card ul {
+.card ul, .bgb-card ul, .card-normal ul {
     list-style: disc;
     padding-left: 1rem;
 }
-.card li {
+.card li, .bgb-card li, .card-normal li {
     color: var(--white);
     padding-bottom: .5rem;
 }
@@ -134,16 +135,42 @@ svg {
 #social {
     text-align: center;
 }
+.links-out {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content:left; 
+    height: 100%; 
+}
+.links-out a {
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--white);
+    color: var(--forest);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1.4; 
+}
+.links-out a:hover {
+    background-color: var(--olive);
+}
 /* -------------------- GLOBAL TEXT -------------------- */
 h1, h2, h3, h4 {
     font-family: lust, cursive;
+}
+h1 {
     padding-top: 3rem;
 }
 h2 {
     font-size: 1.5em;
+    padding-top: 3rem;
 }
 h3 {
     font-size: 1.25em;
+    padding-top: 1.5rem;
 }
 h4 {
     font-size: 1em;
@@ -178,7 +205,7 @@ nav li a[href="index.html"] span {
     white-space: nowrap;
 }
 nav li a, main a, footer a {
-    background-color: var(--butter);
+    background-color: var(--white);
     border-radius: .5rem;
     line-height: inherit;
     font-family: dolly-new, sans-serif;
@@ -193,22 +220,19 @@ nav li a, main a, footer a {
 main a, footer a {
     margin: 1.5rem 0;
 }
-a[href="mailto:christina.carrasquilla@gmail.com"], a[href*=".pdf"]  {
+a[href="mailto:christina.carrasquilla@gmail.com"]  {
     margin: 1.5rem 0;
     max-width: 20rem;
 }
-a[href*=".pdf"]:hover {
-    background-color: var(--white);
-}
 nav li a:hover, main a:hover, footer a:hover {
-    background-color: var(--gray);
+    background-color: var(--olive);
 }
 nav li a[href="index.html"]:hover {
     background-color: transparent;
-    color: var(--teal);
+    color: var(--olive);
 }
-svg:hover {
-    fill: var(--gray);
+#social svg:hover {
+    fill: var(--olive);
 }
 p {
     font-family: dolly-new, sans-serif;
@@ -217,19 +241,17 @@ p {
     color: var(--forest);
     padding: 1rem 0;
 }
+ul, iframe {
+    padding: 1rem 0;
+}
 li {
     font-family: dolly-new, sans-serif;
     line-height: 1.5;
     font-size: 1em;
     color: var(--forest);
 }
-footer li, footer small {
-    color: var(--cream);
-}
-small {
-    font-family: dolly-new, sans-serif;
-    display: inline;
-    text-align: center;
+footer li {
+    color: var(--white);
 }
 q {
     display: block;
@@ -276,10 +298,13 @@ main > section:first-of-type section p {
         display: flex;
         justify-content: center;
     }
-    .card, .reverse-card {
+    .card, .reverse-card, .card-normal {
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 1rem;
+    }
+    .reverse-card iframe, .card-normal iframe {
+        width: 100%;
     }
     .card > section {
         display: flex;
@@ -294,6 +319,10 @@ main > section:first-of-type section p {
     }
     .reverse-card > section:last-of-type {
         grid-column: 1/-1;
+    }
+    #mm {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
     footer .wrapper {
         display: grid;
@@ -325,7 +354,7 @@ main > section:first-of-type section p {
         grid-column: 4/5;
         grid-row: 1/2;
     }
-    .card, .reverse-card {
+    .card, .reverse-card, .portfolio {
         grid-template-columns: 1fr 1fr 1fr;
     }
     .card > section:first-of-type {
@@ -333,5 +362,10 @@ main > section:first-of-type section p {
     }
     .reverse-card > section:last-of-type {
         grid-column: 3/4;
+    }
+    .bgb-card {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 1rem;
     }
 }
