@@ -1,0 +1,337 @@
+/* -------------------- CSS BY CHRISTINA CARRASQUILLA 2025 -------------------- */
+
+/* IMPORTED FONTS */
+@import url("https://use.typekit.net/oay7eai.css");
+
+/* ---------------------------------------- CSS RESET ---------------------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* -------------------- HTML5 display-role reset for older browsers -------------------- */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------------------------------- ROOT VARIABLES ---------------------------------------- */
+:root {
+	--forest: #012326;
+	--teal: #024059;
+	--cream: #f2e1c2;
+	--gray: #aab5bf;
+	--butter: #f2da91;
+	--white: #ffffff;
+}
+/* ---------------------------------------- GLOBAL STYLES ----------------------------------------*/
+/* -------------------- GLOBAL CONTAINERS -------------------- */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+}
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+header {
+    background-color: var(--white);
+    grid-row: 2/3;
+    padding-bottom: 1rem;
+}
+header img {
+    display: none;
+}
+nav {
+    grid-row: 1/2;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+nav, footer {
+    background-color: var(--forest);
+    color: var(--cream);
+}
+footer {
+    padding: 1rem 0;
+}
+.wrapper {
+    width: 90%;
+    min-width: 300px;
+    max-width: 1205px;
+    margin: 0 auto;
+}
+main > section:first-of-type {
+    background-color: var(--gray);
+    padding-bottom: 2rem;
+}
+main > section:nth-of-type(2) {
+    background-color: var(--cream);
+    padding-bottom: 2rem;
+}
+main > section:first-of-type section {
+    background-color: var(--teal);
+    margin: 1rem 0;
+    border-radius: 1rem;
+    color: var(--white);
+    padding: 1rem;
+}
+.card ul {
+    list-style: disc;
+    padding-left: 1rem;
+}
+.card li {
+    color: var(--white);
+    padding-bottom: .5rem;
+}
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+#social {
+    text-align: center;
+}
+/* -------------------- GLOBAL TEXT -------------------- */
+h1, h2, h3, h4 {
+    font-family: lust, cursive;
+    padding-top: 3rem;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.25em;
+}
+h4 {
+    font-size: 1em;
+}
+h1, nav h2, #social h2 {
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+}
+nav li a[href="index.html"] {
+    font-family: lust, cursive;
+    font-size: 2.5em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    color: var(--cream);
+    margin: 2rem 0;
+    text-align: center;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+nav li a[href="index.html"] span {
+    color: var(--white);	
+    font-family: "shabby-chic", sans-serif;
+    position: absolute;
+    top: -1.5rem;
+    left: 35%;
+    transform: translateX(-35%);
+    font-size: 1.1em;
+    white-space: nowrap;
+}
+nav li a, main a, footer a {
+    background-color: var(--butter);
+    border-radius: .5rem;
+    line-height: inherit;
+    font-family: dolly-new, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.25em;
+    display: block;
+    text-align: center;
+    color: var(--forest);
+    padding: .5rem;
+}
+main a, footer a {
+    margin: 1.5rem 0;
+}
+a[href="mailto:christina.carrasquilla@gmail.com"], a[href*=".pdf"]  {
+    margin: 1.5rem 0;
+    max-width: 20rem;
+}
+a[href*=".pdf"]:hover {
+    background-color: var(--white);
+}
+nav li a:hover, main a:hover, footer a:hover {
+    background-color: var(--gray);
+}
+nav li a[href="index.html"]:hover {
+    background-color: transparent;
+    color: var(--teal);
+}
+svg:hover {
+    fill: var(--gray);
+}
+p {
+    font-family: dolly-new, sans-serif;
+    line-height: 1.5;
+    font-size: 1em;
+    color: var(--forest);
+    padding: 1rem 0;
+}
+li {
+    font-family: dolly-new, sans-serif;
+    line-height: 1.5;
+    font-size: 1em;
+    color: var(--forest);
+}
+footer li, footer small {
+    color: var(--cream);
+}
+small {
+    font-family: dolly-new, sans-serif;
+    display: inline;
+    text-align: center;
+}
+q {
+    display: block;
+    font-family: dolly-new, sans-serif;
+    font-size: 2em;
+    line-height: 1.5;
+    padding: 2rem 0;
+    color: var(--forest);
+}
+main > section:first-of-type section p {
+    color: var(--white);
+}
+#social a {
+    background-color: transparent;
+    padding: 0;
+    display: inline-block;
+}
+/* ---------------------------------------- MEDIA QUERY FOR MEDIUM STYLES-------------------- -------------------- */
+@media screen and (min-width:650px) {
+    nav ul {
+        grid-template-columns: 1fr 1fr;
+    }
+    nav li:nth-of-type(2) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    nav li:nth-of-type(3) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    nav li:nth-of-type(4) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    nav li:nth-of-type(5) {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    header img {
+        display: block;
+        padding-right: 1rem;
+    }
+    #quote {
+        display: flex;
+        justify-content: center;
+    }
+    .card, .reverse-card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+    .card > section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .card a {
+        align-items: stretch;
+    }
+    .card > section:first-of-type {
+        grid-column: 1/-1;
+    }
+    .reverse-card > section:last-of-type {
+        grid-column: 1/-1;
+    }
+    footer .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #social {
+        text-align: right;
+    }
+}
+
+/* ---------------------------------------- MEDIA QUERY FOR LARGE STYLES ---------------------------------------- */
+@media screen and (min-width:960px) {
+    nav ul {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    nav li:nth-of-type(2) {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    nav li:nth-of-type(3) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    nav li:nth-of-type(4) {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    nav li:nth-of-type(5) {
+        grid-column: 4/5;
+        grid-row: 1/2;
+    }
+    .card, .reverse-card {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card > section:first-of-type {
+        grid-column: 1/2;
+    }
+    .reverse-card > section:last-of-type {
+        grid-column: 3/4;
+    }
+}
