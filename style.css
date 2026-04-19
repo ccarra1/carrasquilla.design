@@ -143,8 +143,8 @@ svg {
     height: 100%; 
 }
 .links-out a {
-    width: 8rem;
-    height: 8rem;
+    width: 12rem;
+    height: 12rem;
     background-color: var(--white);
     color: var(--forest);
     display: flex;
